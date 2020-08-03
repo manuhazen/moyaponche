@@ -1,0 +1,12 @@
+{
+  "name": "moyaponche",
+  "displayName": "moyaponche",
+  "expo": {
+    "name": "moyaponche",
+    "slug": "moyaponche",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
