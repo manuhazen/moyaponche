@@ -58,6 +58,7 @@ export class Login extends Component {
 
   render() {
     const { login } = this.props;
+    const { email, password } = this.state;
     return (
       <LoginContainer>
         <InnerContainer>
@@ -70,20 +71,18 @@ export class Login extends Component {
           <Input
             placeholder="Correo"
             keyboardType="email-address"
-            value={this.state.email}
-            onChange={(text) => this.setState({ email: text })}
+            value={email}
+            onChangeText={(text) => this.setState({ email: text })}
           />
           <Input
             secureTextEntry
             placeholder="Contraseña"
             keyboardType="visible-password"
-            value={this.state.password}
-            onChange={(text) => this.setState({ password: text })}
+            value={password}
+            onChangeText={(text) => this.setState({ password: text })}
           />
           <SubmitButton
-            onPress={() =>
-              login({ email: this.state.email, password: this.state.password })
-            }
+            onPress={() => login({ email: email, password: password })}
           >
             <TextButton>Ingresar</TextButton>
           </SubmitButton>

@@ -86,8 +86,8 @@ export class Main extends Component {
 
   async componentDidMount() {
     await Camera.requestPermissionsAsync();
-    this.checkDeviceForHardware();
-    this.checkForFingerprints();
+    await this.checkDeviceForHardware();
+    await this.checkForFingerprints();
     this.setState({
       punchs: DATA,
       typeCamera: Camera.Constants.Type.front,

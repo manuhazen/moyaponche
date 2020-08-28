@@ -35,21 +35,21 @@ const App = (props) => {
     }
   };
 
-  useEffect(() => {
-    async function getUser() {
-      try {
-        const user = await AsyncStorage.getItem("user");
-        if (user !== null) {
-          setUser(false);
-        } else {
-          setUser(true);
-        }
-      } catch (error) {
-        alert(error);
-      }
-    }
-    getUser();
-  });
+  // useEffect(() => {
+  //   async function getUser() {
+  //     try {
+  //       const user = await AsyncStorage.getItem("user");
+  //       if (user !== null) {
+  //         setUser(false);
+  //       } else {
+  //         setUser(true);
+  //       }
+  //     } catch (error) {
+  //       alert(error);
+  //     }
+  //   }
+  //   getUser();
+  // });
 
   return (
     <NavigationContainer>
